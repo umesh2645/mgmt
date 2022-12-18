@@ -1,0 +1,1 @@
+To start this node app `npm run start`
