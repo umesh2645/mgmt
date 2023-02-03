@@ -1,0 +1,16 @@
+service: aws-node-express-api-project
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: ap-south-1
+
+functions:
+  api:
+    handler: index.handler
+    timeout: 5 # seconds
+    memorySize: 128 # mb
+    events:
+      - httpApi: '*'

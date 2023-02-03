@@ -1,0 +1,14 @@
+service: aws-node-project
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: ap-south-1
+
+functions:
+  function1:
+    handler: index.handler
+    timeout: 5 # seconds
+    memorySize: 128 # mb
